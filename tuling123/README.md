@@ -4,7 +4,8 @@ tuling 聊天机器人
 # dependency
 
 ```
-$ sudo pip install baidu-aip fire
+$ brew install portaudio
+$ sudo pip install fire baidu-aip pyaudio
 ```
 
 # usage

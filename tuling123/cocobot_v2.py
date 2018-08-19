@@ -25,10 +25,10 @@ class CocoBot(object):
         result = self.client.synthesis(sentence, 'zh', 1, {'vol': 5, 'per': 4})
         # 识别正确返回语音二进制 错误则返回dict 参照下面错误码
         if not isinstance(result, dict):
-            with open('audio.mp3', 'wb') as f:
+            with open('bot.mp3', 'wb') as f:
                 f.write(result)
                 f.close()
-            subprocess.call(["/usr/bin/afplay", os.getcwd()+"/audio.mp3"])
+            subprocess.call(["/usr/bin/afplay", os.getcwd()+"/bot.mp3"])
 
     def say(self, key):
         api = 'http://www.tuling123.com/openapi/api?key=' + key + '&info='
